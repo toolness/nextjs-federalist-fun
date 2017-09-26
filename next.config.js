@@ -11,8 +11,8 @@ module.exports = {
   assetPrefix: BASEURL,
   exportPathMap: function () {
     return {
-      [path('/')]: { page: '/' },
-      [path('/about')]: { page: '/about' },
+      '/': { page: '/' },
+      '/about': { page: '/about' },
     };
   }
 };
