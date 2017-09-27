@@ -1,6 +1,36 @@
 This is a proof-of-concept for deploying static [next.js][] sites on
 [Federalist][].
 
+## Rationale
+
+### Making migration easy
+
+At 18F, many projects start out as static sites, but frequently
+evolve into requiring some dynamic functionality. Traditional
+static site generators like Jekyll and Hugo aren't built to support
+this very well--particularly not for projects that want to follow
+a progressive enhancement philosophy that demands server-rendered HTML.
+
+On the other hand, next.js is a framework that supports the rendering
+of dynamic content on the back-end *as well as* generating a static
+export of a site. This means that we can still have the benefits of
+static sites, yet still have the freedom to migrate to a dynamic
+backend if needed.
+
+### Making development faster
+
+Because next.js works both as a static site generator *and* a server that
+dynamically generates a page's content on a per-request basis, it means
+that we can use its dynamic functionality during development and its
+static generation capabilities for deployment.
+
+In contrast, because pure static site generators like Jekyll and Hugo
+don't support on-demand dynamic page rendering, medium-to-large sites
+frequently suffer from many development inconveniences; for example, editing
+a single line of HTML in a base template could trigger the regeneration of
+hundreds of pages, requiring developers to wait dozens of seconds to see
+the effects of their changes. With next.js, however, this isn't an issue.
+
 ## Quick start
 
 ```
