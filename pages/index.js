@@ -10,6 +10,7 @@ const Index = () => (
       <a style={{ fontSize: 20 }}>About Page</a>
     </Link>
     <p>Hello Next.js yoooo {path('/about')}</p>
+    <img src={path('/static/wds-home-new-2x.png')}/>
   </div>
 );
 
