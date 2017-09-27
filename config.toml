@@ -1,3 +1,6 @@
+# This is just a trivial file to make Hugo work; see the README.md
+# for an explanation of why this exists.
+
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My New Hugo Site"
