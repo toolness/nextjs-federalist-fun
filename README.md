@@ -66,6 +66,11 @@ branch build, but you can also set this environment variable locally and
 then run `npm run federalist` if you'd like to simulate Federalist
 branch builds on your own system.
 
+Note also that all links in generated pages need to be prefixed with
+the `BASEURL` environment variable, or else they will point to the
+wrong place on Federalist branch builds. See the source code in
+the `pages` directory for examples.
+
 [next.js]: https://github.com/zeit/next.js/
 [Federalist]: https://federalist.18f.gov
 [Hugo]: http://gohugo.io/
