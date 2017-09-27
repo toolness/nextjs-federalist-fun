@@ -3,13 +3,14 @@ This is a proof-of-concept for deploying static [next.js][] sites on
 
 ## Rationale
 
-### Making migration easy
+### Making evolution easy
 
 At 18F, many projects start out as static sites, but frequently
 evolve into requiring some dynamic functionality. Traditional
 static site generators like Jekyll and Hugo aren't built to support
 this very well--particularly not for projects that want to follow
-a progressive enhancement philosophy that demands server-rendered HTML.
+a progressive enhancement philosophy that requires the dynamic rendering
+of HTML on the server-side.
 
 On the other hand, next.js is a framework that supports the rendering
 of dynamic content on the back-end *as well as* generating a static
