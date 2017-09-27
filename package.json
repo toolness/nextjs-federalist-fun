@@ -8,7 +8,7 @@
     "dev": "next",
     "build": "next build",
     "export": "next export",
-    "federalist": "next build && next export && node set-site-prefix.js && mv out _site"
+    "federalist": "next build && next export && node set-site-prefix.js && rm -rf _site && mv out _site"
   },
   "keywords": [],
   "author": "",

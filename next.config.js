@@ -1,14 +1,19 @@
-let pathModule = require('path');
-const BASEURL = process.env.BASEURL || '/';
+let webpack = require('webpack');
 
-if (pathModule.posix) pathModule = pathModule.posix;
-
-const path = p => pathModule.join(BASEURL, p);
+// https://github.com/18F/federalist-garden-build/blob/staging/build.sh#L85
+const BASEURL = process.env.BASEURL || '';
 
 module.exports = {
-  // https://github.com/18F/federalist-garden-build/blob/staging/build.sh#L85
-  path,
   assetPrefix: BASEURL,
+  webpack: (config) => {
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        'process.env.BASEURL': JSON.stringify(BASEURL),
+      })
+    );
+
+    return config;
+  },
   exportPathMap: function () {
     return {
       '/': { page: '/' },

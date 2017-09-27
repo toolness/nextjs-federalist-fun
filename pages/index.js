@@ -1,12 +1,15 @@
 import Link from 'next/link';
-import { path } from '../next.config.js';
+
+function path(p) {
+  return (process.env.BASEURL || '') + p;
+}
 
 const Index = () => (
   <div>
-    <Link href="/about">
-      <button style={{ fontSize: 20 }}>About Page</button>
+    <Link href={path('/about')}>
+      <a style={{ fontSize: 20 }}>About Page</a>
     </Link>
-    <p>Hello Next.js {path('/about')}</p>
+    <p>Hello Next.js yoooo {path('/about')}</p>
   </div>
 );
 

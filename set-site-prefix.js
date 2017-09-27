@@ -10,7 +10,7 @@ const prefix = config.assetPrefix
 
 console.log(`prefix is ${prefix}.`);
 
-if (prefix === '/') {
+if (!prefix) {
   console.log('nothing to change, exiting.');
   process.exit(0);
 }
