@@ -18,6 +18,7 @@ module.exports = {
     return {
       '/': { page: '/' },
       '/about': { page: '/about' },
+      '/p/blah': { page: '/p', query: { title: 'blah' }},
     };
   }
 };

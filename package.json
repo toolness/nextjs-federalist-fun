@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next",
+    "dev": "node dev-server.js",
     "build": "next build",
     "export": "next export",
     "federalist": "next build && next export && node set-site-prefix.js && rm -rf _site && mv out _site"
